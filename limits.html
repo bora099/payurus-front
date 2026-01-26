@@ -107,31 +107,193 @@
 <div class="flex flex-wrap justify-between gap-3 p-4">
 <div class="flex min-w-0 sm:min-w-72 flex-col gap-2">
 <p class="text-gray-900 dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]" data-i18n="common-limits">Limits</p>
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal" data-i18n="limits-subtitle">View transaction limits for your Payurus account.</p>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal" data-i18n="limits-subtitle">View transaction limits and fees for your Payurus account.</p>
 </div>
 </div>
 
-<!-- Limits Table Section -->
+<!-- Deposit Limits Section -->
 <div class="p-4 mb-8">
 <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl shadow-sm p-6 md:p-8">
-<h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8" data-i18n="limits-title">Transaction Limits</h2>
+<h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="limits-deposit-title">Deposit Limits</h2>
+<p class="text-gray-600 dark:text-gray-400 mb-8" data-i18n="limits-deposit-desc">Maximum amounts you can deposit to your Payurus account.</p>
 
 <div class="overflow-x-auto">
 <table class="w-full border-collapse">
 <thead>
 <tr class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-currency">Currency</th>
-<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-per-transaction">Per Transaction Limit</th>
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-verification">Verification Level</th>
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-per-transaction">Per Transaction</th>
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-daily">Daily Limit</th>
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-monthly">Monthly Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-200 dark:border-gray-700">
+<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-level-basic">Basic</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-deposit-basic-per">$5,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-deposit-basic-daily">$10,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-deposit-basic-monthly">$50,000</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-200 dark:border-gray-700">
+<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-level-verified">Verified</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-deposit-verified-per">$20,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-deposit-verified-daily">$50,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-deposit-verified-monthly">$200,000</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-level-premium">Premium</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-deposit-premium-per">$50,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-deposit-premium-daily">$100,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-deposit-premium-monthly">$500,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<!-- Withdrawal Limits Section -->
+<div class="p-4 mb-8">
+<div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl shadow-sm p-6 md:p-8">
+<h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="limits-withdrawal-title">Withdrawal Limits</h2>
+<p class="text-gray-600 dark:text-gray-400 mb-8" data-i18n="limits-withdrawal-desc">Maximum amounts you can withdraw from your Payurus account.</p>
+
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-verification">Verification Level</th>
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-per-transaction">Per Transaction</th>
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-daily">Daily Limit</th>
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-monthly">Monthly Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-200 dark:border-gray-700">
+<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-level-basic">Basic</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-withdrawal-basic-per">$2,500</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-withdrawal-basic-daily">$5,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-withdrawal-basic-monthly">$25,000</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-200 dark:border-gray-700">
+<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-level-verified">Verified</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-withdrawal-verified-per">$10,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-withdrawal-verified-daily">$25,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-withdrawal-verified-monthly">$100,000</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-level-premium">Premium</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-withdrawal-premium-per">$25,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-withdrawal-premium-daily">$50,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-withdrawal-premium-monthly">$250,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<!-- Member-to-Member Transfer Limits Section -->
+<div class="p-4 mb-8">
+<div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl shadow-sm p-6 md:p-8">
+<h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="limits-transfer-title">Member-to-Member Transfer Limits</h2>
+<p class="text-gray-600 dark:text-gray-400 mb-8" data-i18n="limits-transfer-desc">Maximum amounts you can transfer to other Payurus members.</p>
+
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-verification">Verification Level</th>
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-per-transaction">Per Transaction</th>
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-daily">Daily Limit</th>
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-monthly">Monthly Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-200 dark:border-gray-700">
+<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-level-basic">Basic</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-transfer-basic-per">$1,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-transfer-basic-daily">$2,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-transfer-basic-monthly">$10,000</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-200 dark:border-gray-700">
+<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-level-verified">Verified</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-transfer-verified-per">$5,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-transfer-verified-daily">$10,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-transfer-verified-monthly">$50,000</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-level-premium">Premium</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-transfer-premium-per">$10,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-transfer-premium-daily">$20,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-transfer-premium-monthly">$100,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<!-- Card Payment Limits Section -->
+<div class="p-4 mb-8">
+<div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl shadow-sm p-6 md:p-8">
+<h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="limits-card-title">Card Payment Limits</h2>
+<p class="text-gray-600 dark:text-gray-400 mb-8" data-i18n="limits-card-desc">Maximum amounts for card-based transactions on your Payurus account.</p>
+
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
 <th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-daily">Daily Limit</th>
 <th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-monthly">Monthly Limit</th>
 </tr>
 </thead>
 <tbody>
 <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
-<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-usd">USD</td>
-<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-usd-per-transaction">20,000 USD</td>
-<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-usd-daily">50,000 USD</td>
-<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-usd-monthly">100,000 USD</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-card-daily">$3,000</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-card-monthly">$30,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<!-- Transaction Fees Section -->
+<div class="p-4 mb-8">
+<div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl shadow-sm p-6 md:p-8">
+<h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="limits-fees-title">Transaction Fees</h2>
+<p class="text-gray-600 dark:text-gray-400 mb-8" data-i18n="limits-fees-desc">Fees applicable to various transactions on Payurus platform.</p>
+
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-transaction-type">Transaction Type</th>
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-fee">Fee</th>
+<th class="text-left py-4 px-4 text-sm font-semibold text-gray-900 dark:text-white" data-i18n="limits-table-notes">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-200 dark:border-gray-700">
+<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-fees-deposit">Deposit</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400 font-semibold text-green-600 dark:text-green-400" data-i18n="limits-fees-deposit-amount">Free</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-fees-deposit-note">No fees for deposits</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-200 dark:border-gray-700">
+<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-fees-withdrawal">Withdrawal</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400 font-semibold" data-i18n="limits-fees-withdrawal-amount">1% (min $5)</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-fees-withdrawal-note">Minimum fee of $5 applies</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-200 dark:border-gray-700">
+<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-fees-transfer">Member Transfer</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400 font-semibold" data-i18n="limits-fees-transfer-amount">0.5%</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-fees-transfer-note">Transfer between Payurus members</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+<td class="py-4 px-4 text-sm text-gray-900 dark:text-white font-medium" data-i18n="limits-fees-card">Card Payment</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400 font-semibold" data-i18n="limits-fees-card-amount">2.5%</td>
+<td class="py-4 px-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="limits-fees-card-note">For card-based transactions</td>
 </tr>
 </tbody>
 </table>
@@ -153,6 +315,7 @@
 <p data-i18n="limits-info-2">• Higher limits may be available after completing additional verification steps.</p>
 <p data-i18n="limits-info-3">• Limits reset at the beginning of each day and month based on your account timezone.</p>
 <p data-i18n="limits-info-4">• For questions about your specific limits, please contact our support team.</p>
+<p data-i18n="limits-info-5">• Fees are calculated at the time of transaction and may vary by payment method.</p>
 </div>
 </div>
 </div>
@@ -176,9 +339,13 @@
 <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2" data-i18n="limits-faq-q3">Are limits the same for all account types?</h3>
 <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="limits-faq-a3">No, limits vary based on your account type and verification level. Business accounts typically have higher limits than personal accounts.</p>
 </div>
-<div>
+<div class="pb-6 border-b border-gray-200 dark:border-gray-800 last:border-0">
 <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2" data-i18n="limits-faq-q4">What happens if I exceed my limit?</h3>
 <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="limits-faq-a4">If you attempt to exceed your limit, the transaction will be declined. You'll need to wait until the limit resets or contact support to request a temporary limit increase.</p>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2" data-i18n="limits-faq-q5">Are there any fees for transactions?</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="limits-faq-a5">Deposits are free. Withdrawals have a 1% fee (minimum $5). Member-to-member transfers have a 0.5% fee. Card payments have a 2.5% fee.</p>
 </div>
 </div>
 </div>

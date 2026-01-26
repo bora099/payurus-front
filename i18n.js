@@ -502,6 +502,8 @@ const translations = {
         
         // Card Payment Limits
         "limits-card-payment": "Card Payment",
+        "limits-card-title": "Card Payment Limits",
+        "limits-card-desc": "Maximum amounts for card-based transactions on your Payurus account.",
         "limits-card-daily": "$3,000",
         "limits-card-monthly": "$30,000",
         
@@ -1067,6 +1069,8 @@ const translations = {
         
         // Card Payment Limits
         "limits-card-payment": "Kart Ödemesi",
+        "limits-card-title": "Kart Ödeme Limitleri",
+        "limits-card-desc": "Payurus hesabınızda kart tabanlı işlemler için maksimum tutarlar.",
         "limits-card-daily": "$3,000",
         "limits-card-monthly": "$30,000",
         
