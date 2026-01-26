@@ -1128,9 +1128,8 @@ const translations = {
     }
 };
 
-// Get current language - always default to 'en' on page load
-// User's language preference is saved but page always starts in English
-let currentLang = 'en';
+// Get current language from localStorage or default to 'en'
+let currentLang = localStorage.getItem('language') || 'en';
 
 // Function to change language
 function changeLanguage(lang) {
@@ -1256,6 +1255,11 @@ function updateLanguageButton() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
+    // Load saved language from localStorage
+    const savedLang = localStorage.getItem('language');
+    if (savedLang && (savedLang === 'en' || savedLang === 'tr')) {
+        currentLang = savedLang;
+    }
     document.documentElement.lang = currentLang;
     updatePageContent();
     updateLanguageButton();
