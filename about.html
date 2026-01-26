@@ -60,18 +60,18 @@
 <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
 <div class="container mx-auto px-4">
-<div class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-700 py-3">
-<div class="flex items-center gap-4 text-slate-900 dark:text-white">
-<a href="index.html"><img src="images/payuruslogo_15012026.png" alt="Payurus" class="h-5 md:h-6 w-auto"/></a>
+<div class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-700 py-4">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white h-10">
+<a href="index.html" class="flex items-center h-full"><img src="images/payuruslogo_15012026.png" alt="Payurus" class="h-6 md:h-8 w-auto"/></a>
 </div>
-<nav class="hidden md:flex flex-1 justify-center items-center gap-9">
-<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="index.html" data-i18n="nav-home">Home</a>
-<a class="text-primary dark:text-primary text-sm font-bold leading-normal" href="about.html" data-i18n="nav-about">About Us</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="faq.html" data-i18n="nav-faq">FAQ</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="contact.html" data-i18n="nav-contact">Contact Us</a>
+<nav class="hidden md:flex flex-1 justify-center items-center gap-12">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-base font-medium leading-normal" href="index.html" data-i18n="nav-home">Home</a>
+<a class="text-primary dark:text-primary text-base font-bold leading-normal" href="about.html" data-i18n="nav-about">About Us</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-base font-medium leading-normal" href="faq.html" data-i18n="nav-faq">FAQ</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-base font-medium leading-normal" href="contact.html" data-i18n="nav-contact">Contact Us</a>
 </nav>
-<div class="flex gap-2 items-center">
-<div class="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
+<div class="flex gap-2 items-center h-10">
+<div class="flex items-center gap-1 bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
 <button onclick="changeLanguage('en')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="en">EN</button>
 <button onclick="changeLanguage('tr')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="tr">TR</button>
 </div>
@@ -92,10 +92,6 @@
 <a class="block py-2 text-primary dark:text-primary text-sm font-bold leading-normal" href="about.html" data-i18n="nav-about">About Us</a>
 <a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="faq.html" data-i18n="nav-faq">FAQ</a>
 <a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="contact.html" data-i18n="nav-contact">Contact Us</a>
-<div class="flex items-center gap-1 bg-slate-100 dark:bg-slate-800 rounded-lg p-1 mt-4">
-<button onclick="changeLanguage('en')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="en">EN</button>
-<button onclick="changeLanguage('tr')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="tr">TR</button>
-</div>
 <div class="flex gap-2 mt-4">
 <a onclick="redirectToAppStore(event, 'login')" class="flex-1 flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
 <span class="truncate" data-i18n="btn-login">Sign In</span>
@@ -145,29 +141,31 @@
 </div>
 </section>
 <!-- Core Principles Section -->
-<section class="bg-white dark:bg-slate-800 py-16 lg:py-32 w-full">
+<section class="bg-white dark:bg-slate-800 py-16 lg:py-32 w-full" style="
+    padding-top: 100px;
+">
 <div class="container mx-auto px-4 max-w-[1080px] w-full">
 <div class="flex flex-col items-center mb-8">
-<button class="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6" data-i18n="about-why-choose-us">Why Choose Us</button>
-<h2 class="lg:text-5xl sm:text-4xl text-3xl font-semibold text-center mb-4 text-slate-900 dark:text-white" data-i18n="about-core-principles">Core Principles</h2>
-<p class="text-center text-slate-600 dark:text-slate-400 text-lg max-w-2xl" data-i18n="about-core-principles-subtitle">Building the future of digital payments with trust, speed, and security at our foundation.</p>
+<button class="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6" data-i18n="about-why-choose-us">Neden Bizi Seçmelisiniz</button>
+<h2 class="lg:text-5xl sm:text-4xl text-3xl font-semibold text-center mb-4 text-slate-900 dark:text-white" data-i18n="about-core-principles">Ana Temellerimiz</h2>
+<p class="text-center text-slate-600 dark:text-slate-400 text-lg max-w-2xl" data-i18n="about-core-principles-subtitle">Güven, hız ve güvenliği temellerimiz olarak dijital ödemelerin geleceğini inşa ediyoruz.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-stretch mt-10">
 <!-- Pillar 1 -->
 <div class="principle-card bg-white dark:bg-slate-900 rounded-3xl space-y-6 px-4 sm:px-6 md:px-8 lg:px-10 pt-12.5 pb-[22.5px] flex flex-col shadow-lg transition-all duration-300 hover:border-2 hover:border-primary group cursor-pointer">
 <div class="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-primary mt-[15px]">
-<img src="images/wallet.svg" alt="Fast Payments Icon" class="principle-icon size-6 transition-all duration-300" style="filter: brightness(0) saturate(100%) invert(15%) sepia(94%) saturate(7158%) hue-rotate(343deg) brightness(89%) contrast(101%);"/>
+<img src="images/wallet.svg" alt="Fast Payments Icon" class="principle-icon size-6 transition-all duration-300" style="filter: brightness(0) saturate(100%) invert(15%) sepia(94%) saturate(7158%) hue-rotate(343deg) brightness(89%) contrast(101%);">
 </div>
-<h3 class="text-2xl font-semibold text-slate-900 dark:text-white" data-i18n="about-fast-payments">Fast & Easy Payments</h3>
-<p class="text-base leading-relaxed text-slate-600 dark:text-slate-400 flex-grow" data-i18n="about-fast-payments-text">Payurus enables seamless, global payments with the stability and flexibility of digital solutions. With our payment solutions, you can make, send, and receive payments almost instantly. We make daily transactions easy and multi-market payments accessible, secure, and efficient for everyone.</p>
+<h3 class="text-2xl font-semibold text-slate-900 dark:text-white" data-i18n="about-fast-payments">Hızlı ve Kolay Ödemeler</h3>
+<p class="text-base leading-relaxed text-slate-600 dark:text-slate-400 flex-grow" data-i18n="about-fast-payments-text">Payurus, dijital çözümlerin istikrarı ve esnekliği ile sorunsuz, küresel ödemeleri mümkün kılar. Ödeme çözümlerimizle neredeyse anında ödeme yapabilir, gönderebilir ve alabilirsiniz. Günlük işlemleri kolay ve çoklu pazar ödemelerini herkes için erişilebilir, güvenli ve verimli hale getiriyoruz.</p>
 </div>
 <!-- Pillar 2 -->
 <div class="principle-card bg-white dark:bg-slate-900 rounded-3xl space-y-6 px-4 sm:px-6 md:px-8 lg:px-10 py-12.5 flex flex-col shadow-lg transition-all duration-300 hover:border-2 hover:border-primary group cursor-pointer">
 <div class="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-primary mt-[15px]">
-<img src="images/lock.svg" alt="Security Icon" class="principle-icon size-6 transition-all duration-300" style="filter: brightness(0) saturate(100%) invert(15%) sepia(94%) saturate(7158%) hue-rotate(343deg) brightness(89%) contrast(101%);"/>
+<img src="images/lock.svg" alt="Security Icon" class="principle-icon size-6 transition-all duration-300" style="filter: brightness(0) saturate(100%) invert(15%) sepia(94%) saturate(7158%) hue-rotate(343deg) brightness(89%) contrast(101%);">
 </div>
-<h3 class="text-2xl font-semibold text-slate-900 dark:text-white" data-i18n="about-compliance-security">Compliance & Security</h3>
-<p class="text-base leading-relaxed text-slate-600 dark:text-slate-400 flex-grow mb-[10px]" data-i18n="about-compliance-text">Trust and security are at the heart of everything we do. Payurus meets strict compliance standards and ensures that your funds and data are protected at every step.</p>
+<h3 class="text-2xl font-semibold text-slate-900 dark:text-white" data-i18n="about-compliance-security">Uyumluluk ve Güvenlik</h3>
+<p class="text-base leading-relaxed text-slate-600 dark:text-slate-400 flex-grow mb-[10px]" data-i18n="about-compliance-text">Güven ve güvenlik yaptığımız her şeyin merkezindedir. Payurus, sıkı uyumluluk standartlarını karşılar ve fonlarınızın ve verilerinizin her adımda korunduğundan emin olur.</p>
 </div>
 </div>
 </div>
@@ -239,21 +237,26 @@
 <img src="images/dashboard.png" alt="Dashboard Phone" class="w-auto h-[300px] lg:h-[577px] max-w-[90%] lg:max-w-none object-contain"/>
 </div>
 <!-- Text Sections Grid - Positioned around phone -->
-<div class="relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-16 lg:gap-y-12 py-8 lg:py-20">
+<div class="relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-16 lg:gap-y-12 py-8 lg:py-20" style="
+    padding-top: 0px;
+">
 <!-- Top Left -->
-<div class="space-y-4 lg:pr-12 lg:max-w-[480px]">
+<div class="space-y-4 lg:pr-12 lg:max-w-[480px]" style="
+    margin-top: 30px;
+    padding-top: 120px;
+">
 <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-slate-700">
-<img src="images/safe-plus.svg" alt="Safe Plus Icon" class="h-auto max-w-full"/>
+<img src="images/safe-plus.svg" alt="Safe Plus Icon" class="h-auto max-w-full">
 </div>
 <div>
-<p class="mb-2 text-lg font-medium text-slate-900 dark:text-white" data-i18n="about-licensed-title">Licensed & Regulated</p>
+<p class="mb-2 text-lg font-medium text-slate-900 dark:text-white" data-i18n="about-licensed-title">Licensed &amp; Regulated</p>
 <p class="leading-relaxed tracking-tight text-slate-600 dark:text-slate-400 text-sm lg:text-base" data-i18n="about-licensed-text">We operate as a fully authorized payment service provider, adhering to strict regulatory frameworks. This strong regulatory foundation allows us to provide secure and compliant payment services on a global scale.</p>
 </div>
 </div>
 <!-- Top Right -->
-<div class="space-y-4 lg:pl-12 lg:max-w-[480px] lg:ml-auto">
+<div class="space-y-4 lg:pl-12 lg:max-w-[480px] lg:ml-auto" style="padding-top: 120px;margin-left: 95px;margin-top: 30px;">
 <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-slate-700">
-<img src="images/person-key.svg" alt="Person Key Icon" class="h-auto max-w-full"/>
+<img src="images/person-key.svg" alt="Person Key Icon" class="h-auto max-w-full">
 </div>
 <div>
 <p class="mb-2 text-lg font-medium text-slate-900 dark:text-white" data-i18n="about-enterprise-security-title">Enterprise-Level Security</p>
@@ -261,9 +264,12 @@
 </div>
 </div>
 <!-- Bottom Left -->
-<div class="space-y-4 lg:pr-12 lg:max-w-[480px] lg:mt-40">
+<div class="space-y-4 lg:pr-12 lg:max-w-[480px] lg:mt-40" style="
+    margin-top: 60px;
+    margin-right: 95px;
+">
 <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-slate-700">
-<img src="images/person-correct.svg" alt="Person Correct Icon" class="h-auto max-w-full"/>
+<img src="images/person-correct.svg" alt="Person Correct Icon" class="h-auto max-w-full">
 </div>
 <div>
 <p class="mb-2 text-lg font-medium text-slate-900 dark:text-white" data-i18n="about-kyc-title">Strong KYC and AML Compliance Protocols</p>
@@ -271,9 +277,12 @@
 </div>
 </div>
 <!-- Bottom Right -->
-<div class="space-y-4 lg:pl-12 lg:max-w-[480px] lg:ml-auto lg:mt-40">
+<div class="space-y-4 lg:pl-12 lg:max-w-[480px] lg:ml-auto lg:mt-40" style="
+    margin-top: 60px;
+    margin-left: 95px;
+">
 <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-slate-700">
-<img src="images/lock.svg" alt="Lock Icon" class="h-auto max-w-full"/>
+<img src="images/lock.svg" alt="Lock Icon" class="h-auto max-w-full">
 </div>
 <div>
 <p class="mb-2 text-lg font-medium text-gray-900 dark:text-white" data-i18n="about-multi-layer-title">Multi-Layer Protection</p>

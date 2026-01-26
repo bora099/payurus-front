@@ -103,18 +103,18 @@
 <div class="min-h-screen flex flex-col">
 <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
 <div class="container mx-auto px-4">
-<div class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-700 py-3">
-<div class="flex items-center gap-4 text-slate-900 dark:text-white">
-<a href="index.html"><img src="images/payuruslogo_15012026.png" alt="Payurus" class="h-5 md:h-6 w-auto"/></a>
+<div class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-700 py-4">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white h-10">
+<a href="index.html" class="flex items-center h-full"><img src="images/payuruslogo_15012026.png" alt="Payurus" class="h-6 md:h-8 w-auto"/></a>
 </div>
-<nav class="hidden md:flex flex-1 justify-center items-center gap-9">
-<a class="text-primary dark:text-primary text-sm font-bold leading-normal" href="index.html" data-i18n="nav-home">Home</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="about.html" data-i18n="nav-about">About Us</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="faq.html" data-i18n="nav-faq">FAQ</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="contact.html" data-i18n="nav-contact">Contact Us</a>
+<nav class="hidden md:flex flex-1 justify-center items-center gap-12">
+<a class="text-primary dark:text-primary text-base font-bold leading-normal" href="index.html" data-i18n="nav-home">Home</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-base font-medium leading-normal" href="about.html" data-i18n="nav-about">About Us</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-base font-medium leading-normal" href="faq.html" data-i18n="nav-faq">FAQ</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-base font-medium leading-normal" href="contact.html" data-i18n="nav-contact">Contact Us</a>
 </nav>
-<div class="flex gap-2 items-center">
-<div class="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
+<div class="flex gap-2 items-center h-10">
+<div class="flex items-center gap-1 bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
 <button onclick="changeLanguage('en')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="en">EN</button>
 <button onclick="changeLanguage('tr')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="tr">TR</button>
 </div>
@@ -135,10 +135,6 @@
 <a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="about.html" data-i18n="nav-about">About Us</a>
 <a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="faq.html" data-i18n="nav-faq">FAQ</a>
 <a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="contact.html" data-i18n="nav-contact">Contact Us</a>
-<div class="flex items-center gap-1 bg-slate-100 dark:bg-slate-800 rounded-lg p-1 mt-4">
-<button onclick="changeLanguage('en')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="en">EN</button>
-<button onclick="changeLanguage('tr')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="tr">TR</button>
-</div>
 <div class="flex gap-2 mt-4">
 <a onclick="redirectToAppStore(event, 'login')" class="flex-1 flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
 <span class="truncate" data-i18n="btn-login">Sign In</span>
@@ -205,7 +201,7 @@
 <div class="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-slate-800/45 to-slate-900/50 dark:from-slate-900/60 dark:via-slate-800/55 dark:to-slate-900/60 rounded-3xl"></div>
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-<div class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center flex flex-col items-center shadow-2xl h-full">
+<a href="deposit-details.html" class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center flex flex-col items-center shadow-2xl h-full transition-all hover:scale-105 hover:shadow-3xl hover:border-primary/50 cursor-pointer">
 <div class="flex-shrink-0">
 <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 text-white shadow-lg">
 <span class="material-symbols-outlined">
@@ -217,8 +213,8 @@
 <p class="mt-2 text-base text-slate-600 dark:text-slate-400 flex-grow" data-i18n="index-deposit-desc">
                                 Easily load balance from your bank account or card. Your transactions happen instantly.
                             </p>
-</div>
-<div class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center flex flex-col items-center shadow-2xl h-full">
+</a>
+<a href="transfer-details.html" class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center flex flex-col items-center shadow-2xl h-full transition-all hover:scale-105 hover:shadow-3xl hover:border-primary/50 cursor-pointer">
 <div class="flex-shrink-0">
 <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-sky-500 to-cyan-600 text-white shadow-lg">
 <span class="material-symbols-outlined">
@@ -230,8 +226,8 @@
 <p class="mt-2 text-base text-slate-600 dark:text-slate-400 flex-grow" data-i18n="index-send-desc">
                                 Send money to your loved ones 24/7 for free with just a phone number or email address.
                             </p>
-</div>
-<div class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center flex flex-col items-center shadow-2xl h-full">
+</a>
+<a href="withdrawal-details.html" class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-md p-6 rounded-3xl border border-white/30 text-center flex flex-col items-center shadow-2xl h-full transition-all hover:scale-105 hover:shadow-3xl hover:border-primary/50 cursor-pointer">
 <div class="flex-shrink-0">
 <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-lg">
 <span class="material-symbols-outlined">
@@ -243,7 +239,7 @@
 <p class="mt-2 text-base text-slate-600 dark:text-slate-400 flex-grow" data-i18n="index-withdraw-desc">
                                 Safely transfer the balance in your account to your own bank account whenever you want.
                             </p>
-</div>
+</a>
 </div>
 </div>
 </section>
@@ -259,31 +255,13 @@
 <p class="mt-4 text-lg text-white/90 drop-shadow-md" data-i18n="index-security-desc">We protect your account and data with the highest level of security standards. Make transactions with peace of mind.</p>
 </div>
 <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-<div class="flex items-start space-x-4">
-<div class="hidden min-[400px]:flex flex-shrink-0">
-<div class="flex items-center justify-center h-10 w-10 rounded-lg bg-white/20 backdrop-blur-sm text-white border border-white/30">
-<span class="material-symbols-outlined">
-                                        shield_lock
-                                    </span>
+<div class="text-center">
+<h4 class="text-xl font-semibold text-white drop-shadow-md mb-3" data-i18n="index-kyc">KYC Verification</h4>
+<p class="text-base text-white/90 drop-shadow-sm leading-relaxed" data-i18n="index-kyc-desc">We provide a secure platform in compliance with legal regulations with our "Know Your Customer" policy.</p>
 </div>
-</div>
-<div>
-<h4 class="text-lg font-medium text-white drop-shadow-md" data-i18n="index-kyc">KYC Verification</h4>
-<p class="mt-1 text-white/90 drop-shadow-sm" data-i18n="index-kyc-desc">We provide a secure platform in compliance with legal regulations with our "Know Your Customer" policy.</p>
-</div>
-</div>
-<div class="flex items-start space-x-4">
-<div class="hidden min-[400px]:flex flex-shrink-0">
-<div class="flex items-center justify-center h-10 w-10 rounded-lg bg-white/20 backdrop-blur-sm text-white border border-white/30">
-<span class="material-symbols-outlined">
-                                        phonelink_lock
-                                    </span>
-</div>
-</div>
-<div>
-<h4 class="text-lg font-medium text-white drop-shadow-md" data-i18n="index-2fa">Two-Factor Authentication (2FA)</h4>
-<p class="mt-1 text-white/90 drop-shadow-sm" data-i18n="index-2fa-desc">Protect yourself against unauthorized access by adding an extra layer of security to your account.</p>
-</div>
+<div class="text-center">
+<h4 class="text-xl font-semibold text-white drop-shadow-md mb-3" data-i18n="index-2fa">Two-Factor Authentication (2FA)</h4>
+<p class="text-base text-white/90 drop-shadow-sm leading-relaxed" data-i18n="index-2fa-desc">Protect yourself against unauthorized access by adding an extra layer of security to your account.</p>
 </div>
 </div>
 </div>
