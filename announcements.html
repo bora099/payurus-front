@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n-title="common-announcements">Payurus - Announcements</title>
+<link rel="icon" type="image/x-icon" href="payurus_p_logo_15012026.ico"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c70038",
+                        "background-light": "#fafafa",
+                        "background-dark": "#22252a",
+                        "card-light": "#ffffff",
+                        "card-dark": "#2d3036",
+                        "text-main-light": "#181013",
+                        "text-main-dark": "#f3f4f6",
+                        "text-muted-light": "#8d5e6b",
+                        "text-muted-dark": "#9ca3af",
+                        "border-light": "#f5f0f1",
+                        "border-dark": "#374151",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .lang-btn.active {
+            background-color: #c70038;
+            color: white;
+        }
+        .lang-btn:not(.active) {
+            background-color: transparent;
+            color: #64748b;
+        }
+        .lang-btn:not(.active):hover {
+            background-color: #f1f5f9;
+            color: #c70038;
+        }
+        .dark .lang-btn:not(.active):hover {
+            background-color: #334155;
+        }
+    </style>
+    <script src="i18n.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased transition-colors duration-200">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-700 py-3">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<a href="index.html"><img src="payuruslogo_15012026.png" alt="Payurus" class="h-5 md:h-6 w-auto"/></a>
+</div>
+<nav class="hidden md:flex flex-1 justify-center items-center gap-9">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="index.html" data-i18n="nav-home">Home</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="about.html" data-i18n="nav-about">About Us</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="faq.html" data-i18n="nav-faq">FAQ</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="contact.html" data-i18n="nav-contact">Contact Us</a>
+</nav>
+<div class="flex gap-2 items-center">
+<div class="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
+<button onclick="changeLanguage('en')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="en">EN</button>
+<button onclick="changeLanguage('tr')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="tr">TR</button>
+</div>
+<a onclick="redirectToAppStore(event, 'login')" class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate" data-i18n="btn-login">Sign In</span>
+</a>
+<a onclick="redirectToAppStore(event, 'signup')" class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-200/50 dark:bg-slate-700/50 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate" data-i18n="btn-signup">Sign Up</span>
+</a>
+<button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-700 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 py-4 space-y-3">
+<a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="index.html" data-i18n="nav-home">Home</a>
+<a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="about.html" data-i18n="nav-about">About Us</a>
+<a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="faq.html" data-i18n="nav-faq">FAQ</a>
+<a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="contact.html" data-i18n="nav-contact">Contact Us</a>
+<div class="flex items-center gap-1 bg-slate-100 dark:bg-slate-800 rounded-lg p-1 mt-4">
+<button onclick="changeLanguage('en')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="en">EN</button>
+<button onclick="changeLanguage('tr')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="tr">TR</button>
+</div>
+<div class="flex gap-2 mt-4">
+<a onclick="redirectToAppStore(event, 'login')" class="flex-1 flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate" data-i18n="btn-login">Sign In</span>
+</a>
+<a onclick="redirectToAppStore(event, 'signup')" class="flex-1 flex items-center justify-center rounded-lg h-10 px-4 bg-slate-200/50 dark:bg-slate-700/50 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate" data-i18n="btn-signup">Sign Up</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-8 lg:px-20 xl:px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 gap-8">
+<div class="flex flex-col gap-4 animate-fade-in-up">
+<div class="flex flex-wrap justify-between gap-3 px-4">
+<div class="flex min-w-0 sm:min-w-72 flex-col gap-3">
+<h1 class="text-text-main-light dark:text-text-main-dark text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]" data-i18n="announcements-title">
+                                    Announcements <span class="text-primary">.</span>
+</h1>
+<p class="text-text-muted-light dark:text-text-muted-dark text-lg font-normal leading-normal max-w-2xl" data-i18n="announcements-subtitle">
+                                    Stay informed about the latest developments, system updates and innovations in the Payurus ecosystem.
+                                </p>
+</div>
+</div>
+<div class="px-4 mt-4">
+<div class="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center bg-white dark:bg-card-dark p-2 rounded-xl shadow-sm border border-border-light dark:border-border-dark">
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-2 md:pb-0 w-full md:w-auto">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary text-white pl-4 pr-4 transition-transform active:scale-95 shadow-md shadow-primary/20">
+<p class="text-sm font-bold leading-normal" data-i18n="announcements-filter-all">All</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-light dark:bg-background-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-text-main-light dark:text-text-main-dark border border-transparent hover:border-gray-300 dark:hover:border-gray-600 pl-4 pr-4 transition-all">
+<p class="text-sm font-medium leading-normal" data-i18n="announcements-filter-system">System</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-light dark:bg-background-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-text-main-light dark:text-text-main-dark border border-transparent hover:border-gray-300 dark:hover:border-gray-600 pl-4 pr-4 transition-all">
+<p class="text-sm font-medium leading-normal" data-i18n="announcements-filter-features">New Features</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-light dark:bg-background-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-text-main-light dark:text-text-main-dark border border-transparent hover:border-gray-300 dark:hover:border-gray-600 pl-4 pr-4 transition-all">
+<p class="text-sm font-medium leading-normal" data-i18n="announcements-filter-press">Press</p>
+</button>
+</div>
+<div class="relative w-full md:w-64">
+<span class="absolute inset-y-0 left-3 flex items-center text-text-muted-light dark:text-text-muted-dark">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</span>
+<input class="w-full h-9 pl-10 pr-4 rounded-lg bg-background-light dark:bg-background-dark border-none focus:ring-2 focus:ring-primary/50 text-sm text-text-main-light dark:text-text-main-dark placeholder-text-muted-light dark:placeholder-text-muted-dark" type="text" data-i18n="announcements-search-placeholder"/>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 px-4 pb-12">
+<div class="absolute left-[50%] top-[300px] bottom-0 w-px bg-gradient-to-b from-transparent via-border-light dark:via-border-dark to-transparent -z-10 hidden lg:block"></div>
+<div class="group relative flex flex-col md:flex-row items-stretch overflow-hidden rounded-2xl bg-white dark:bg-card-dark shadow-[0_2px_12px_rgba(0,0,0,0.08)] dark:shadow-none dark:border dark:border-border-dark hover:shadow-lg transition-all duration-300">
+<div class="absolute top-4 left-4 z-10 flex items-center gap-1.5 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-2.5 py-1 rounded-full border border-gray-100 dark:border-gray-700 shadow-sm">
+<span class="size-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold text-text-main-light dark:text-text-main-dark uppercase tracking-wider" data-i18n="announcements-featured">Featured</span>
+</div>
+<div class="flex flex-[3] flex-col justify-between gap-6 p-6 md:p-8">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2 text-xs font-bold tracking-wide uppercase text-primary">
+<span data-i18n="announcements-new-feature">New Feature</span>
+<span class="size-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+<span class="text-text-muted-light dark:text-text-muted-dark font-medium normal-case">October 12, 2024</span>
+</div>
+<h3 class="text-text-main-light dark:text-text-main-dark text-2xl md:text-3xl font-bold leading-tight group-hover:text-primary transition-colors" data-i18n="announcements-wallet-title">
+                                        Meet Payurus Wallet 2.0
+                                    </h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-base md:text-lg leading-relaxed" data-i18n="announcements-wallet-desc">
+                                        We've completely redesigned the user experience. Your transactions are now 40% faster, the interface is cleaner, and AI-powered budget management is in your pocket.
+                                    </p>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold text-sm md:text-base group/btn w-fit mt-auto">
+<span class="border-b-2 border-transparent group-hover/btn:border-primary transition-all" data-i18n="announcements-view-details">View Details</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+<div class="w-full md:flex-[2] bg-gray-100 dark:bg-gray-800 min-h-[240px] md:min-h-full relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent mix-blend-overlay"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Modern mobile banking interface mockup on abstract background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuArE3oTMv8C3NIlWzVJAsj0q-JlsFBqILkIDFq_6yzpEGSVO1GJa4hL_K_xQhBoWW7cD187JQwGSrnwA4HDmXce5p_JE1IMqDM328HwF0ibIq_yY33gaZq6x1U1JuUyeux9MZq11eAVe4fWTE7B4-myD6-ZCP15Mki-u0a4TFsyfF03yqCaPM85Idn1QrNpm9-dZT7-PZTMpO2L4sdmLUUj4BUkbuXZ6hSGAOBLPNxG6jj5Jnd07C8ITuObu1gAPtSfWWsjXSEvmGzx');">
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-white dark:bg-card-dark shadow-sm border border-border-light dark:border-border-dark hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-300">
+<div class="flex-shrink-0">
+<div class="size-12 rounded-xl bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 flex items-center justify-center">
+<span class="material-symbols-outlined">build</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-background-light dark:bg-background-dark text-text-muted-light dark:text-text-muted-dark border border-border-light dark:border-border-dark" data-i18n="announcements-filter-system">System</span>
+<span class="text-xs text-text-muted-light dark:text-text-muted-dark">• October 10, 2024</span>
+</div>
+<h3 class="text-lg font-bold text-text-main-light dark:text-text-main-dark" data-i18n="announcements-maintenance-title">Planned Maintenance Work</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed" data-i18n="announcements-maintenance-desc">
+                                    In order to provide better service, planned maintenance work will be carried out on our database infrastructure between October 15, 02:00 - 04:00. Instant interruptions may occur during this time.
+                                </p>
+</div>
+<div class="flex-shrink-0 flex items-center md:items-start pt-2">
+<button class="size-10 flex items-center justify-center rounded-full bg-background-light dark:bg-background-dark hover:bg-primary hover:text-white transition-colors text-text-main-light dark:text-text-main-dark">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-white dark:bg-card-dark shadow-sm border border-border-light dark:border-border-dark hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-300">
+<div class="flex-shrink-0">
+<div class="size-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-background-light dark:bg-background-dark text-text-muted-light dark:text-text-muted-dark border border-border-light dark:border-border-dark" data-i18n="announcements-security">Security</span>
+<span class="text-xs text-text-muted-light dark:text-text-muted-dark">• September 28, 2024</span>
+</div>
+<h3 class="text-lg font-bold text-text-main-light dark:text-text-main-dark" data-i18n="announcements-2fa-title">About 2FA Requirement</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed" data-i18n="announcements-2fa-desc">
+                                    To maximize your account security, Two-Factor Authentication (2FA) will become mandatory for all corporate accounts as of November 1.
+                                </p>
+</div>
+<div class="flex-shrink-0 flex items-center md:items-start pt-2">
+<button class="size-10 flex items-center justify-center rounded-full bg-background-light dark:bg-background-dark hover:bg-primary hover:text-white transition-colors text-text-main-light dark:text-text-main-dark">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex justify-center mt-8">
+<button class="group flex items-center gap-2 px-6 py-3 rounded-full bg-white dark:bg-card-dark border border-border-light dark:border-border-dark text-text-main-light dark:text-text-main-dark font-semibold text-sm hover:shadow-md transition-all">
+<span data-i18n="announcements-load-more">Older Announcements</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-y-0.5 transition-transform">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="bg-white dark:bg-slate-800/30 border-t border-slate-200 dark:border-slate-700 pt-16 pb-8 mt-auto">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 mb-12">
+<div class="lg:col-span-3">
+<div class="flex items-center gap-2 mb-6 text-slate-900 dark:text-white">
+<a href="index.html"><img src="payuruslogo_15012026.png" alt="Payurus" class="h-6 w-auto"/></a>
+</div>
+<p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed" data-i18n="footer-description">
+Manage your financial transactions quickly, easily and securely. Step into the future of finance with Payurus.
+</p>
+<div class="flex justify-between items-center gap-4">
+<a href="https://play.google.com/store/apps/details?id=com.payurus" target="_blank" class="hover:opacity-90 transition-all transform hover:-translate-y-1 inline-block rounded-xl overflow-hidden" style="border: 1px solid rgba(0, 0, 0, 1) !important; background-color: rgba(42, 45, 54, 1) !important; display: inline-block;">
+<img src="google.jpg" alt="Get it on Google Play" class="h-12 w-auto object-contain block" style="border: none !important;"/>
+</a>
+<a href="https://apps.apple.com/app/payurus" target="_blank" class="hover:opacity-90 transition-all transform hover:-translate-y-1 inline-block rounded-xl overflow-hidden" style="border: 1px solid rgba(0, 0, 0, 1) !important; background-color: rgba(42, 45, 54, 1) !important; display: inline-block;">
+<img src="apple.jpg" alt="Download on the App Store" class="h-12 w-auto object-contain block" style="border: none !important;"/>
+</a>
+</div>
+</div>
+<div class="lg:col-span-3 sm:col-span-4 md:col-span-1">
+<h3 class="font-bold text-slate-900 dark:text-white mb-4" data-i18n="footer-quick-access">Quick Access</h3>
+<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="index.html" data-i18n="common-home">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="about.html" data-i18n="nav-about">About Us</a></li>
+</ul>
+</div>
+<div class="lg:col-span-3 sm:col-span-4 md:col-span-1">
+<h3 class="font-bold text-slate-900 dark:text-white mb-4" data-i18n="footer-transactions">Transactions</h3>
+<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="deposit-details.html" data-i18n="common-deposit">Deposit Details</a></li>
+<li><a class="hover:text-primary transition-colors" href="withdrawal-details.html" data-i18n="common-withdrawal">Withdrawal Details</a></li>
+<li><a class="hover:text-primary transition-colors" href="transfer-details.html" data-i18n="common-transfer">Transfer Details</a></li>
+<li><a class="hover:text-primary transition-colors" href="limits.html" data-i18n="common-limits">Limits</a></li>
+</ul>
+</div>
+<div class="lg:col-span-3 sm:col-span-4 md:col-span-1">
+<h3 class="font-bold text-slate-900 dark:text-white mb-4" data-i18n="footer-support">Support &amp; Information</h3>
+<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="faq.html" data-i18n="common-faq">Frequently Asked Questions</a></li>
+<li><a class="hover:text-primary transition-colors" href="contact.html" data-i18n="common-contact">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="announcements.html" data-i18n="common-announcements">Announcements</a></li>
+<li><a class="hover:text-primary transition-colors" href="privacy.html" data-i18n="common-privacy">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-700 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+<p class="text-sm text-slate-500 dark:text-slate-500" data-i18n="footer-copyright">© 2024 Payurus. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined !text-xl">public</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined !text-xl">alternate_email</span></a>
+</div>
+</div>
+</div>
+</footer>
+</main>
+<!-- App Store Redirect Overlay -->
+<div id="app-store-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[9999] hidden items-center justify-center flex-col gap-6">
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-8 md:p-12 max-w-md mx-4 text-center shadow-2xl transform scale-95 opacity-0 transition-all duration-300">
+<div class="mb-6">
+<img src="applestorelogo.png" alt="App Store" class="h-20 w-auto mx-auto mb-4 animate-pulse"/>
+<div class="flex items-center justify-center gap-2 text-primary">
+<div class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 0s;"></div>
+<div class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+<div class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 0.4s;"></div>
+</div>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Redirecting to App Store</h3>
+<p class="text-slate-600 dark:text-slate-400">Please wait while we redirect you to download the Payurus app...</p>
+</div>
+</div>
+<script>
+function redirectToAppStore(event, type) {
+event.preventDefault();
+const overlay = document.getElementById('app-store-overlay');
+overlay.classList.remove('hidden');
+overlay.classList.add('flex');
+setTimeout(() => {
+overlay.querySelector('.transform').classList.remove('scale-95', 'opacity-0');
+overlay.querySelector('.transform').classList.add('scale-100', 'opacity-100');
+}, 10);
+setTimeout(() => {
+window.location.href = 'https://apps.apple.com/app/payurus';
+}, 1500);
+}
+document.addEventListener('DOMContentLoaded', function() {
+const overlay = document.getElementById('app-store-overlay');
+if (overlay) {
+overlay.addEventListener('click', function(e) {
+if (e.target === overlay) {
+overlay.classList.add('hidden');
+overlay.classList.remove('flex');
+}
+});
+}
+});
+</script>
+</body></html>
+

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n-title="common-privacy">Payurus - Privacy Policy</title>
+<link rel="icon" type="image/x-icon" href="payurus_p_logo_15012026.ico"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c70038",
+                        "primary-dark": "#9e002d",
+                        "background-light": "#f8f5f6",
+                        "background-dark": "#230f15",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2d1b21",
+                        "text-main": "#181013",
+                        "text-secondary": "#8d5e6b",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .lang-btn.active {
+            background-color: #c70038;
+            color: white;
+        }
+        .lang-btn:not(.active) {
+            background-color: transparent;
+            color: #64748b;
+        }
+        .lang-btn:not(.active):hover {
+            background-color: #f1f5f9;
+            color: #c70038;
+        }
+        .dark .lang-btn:not(.active):hover {
+            background-color: #334155;
+        }
+    </style>
+    <script src="i18n.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 antialiased transition-colors duration-200 overflow-x-hidden">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-700 py-3">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<a href="index.html"><img src="payuruslogo_15012026.png" alt="Payurus" class="h-5 md:h-6 w-auto"/></a>
+</div>
+<nav class="hidden md:flex flex-1 justify-center items-center gap-9">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="index.html" data-i18n="nav-home">Home</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="about.html" data-i18n="nav-about">About Us</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="faq.html" data-i18n="nav-faq">FAQ</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="contact.html" data-i18n="nav-contact">Contact Us</a>
+</nav>
+<div class="flex gap-2 items-center">
+<div class="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
+<button onclick="changeLanguage('en')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="en">EN</button>
+<button onclick="changeLanguage('tr')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="tr">TR</button>
+</div>
+<a onclick="redirectToAppStore(event, 'login')" class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate" data-i18n="btn-login">Sign In</span>
+</a>
+<a onclick="redirectToAppStore(event, 'signup')" class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-200/50 dark:bg-slate-700/50 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate" data-i18n="btn-signup">Sign Up</span>
+</a>
+<button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-700 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 py-4 space-y-3">
+<a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="index.html" data-i18n="nav-home">Home</a>
+<a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="about.html" data-i18n="nav-about">About Us</a>
+<a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="faq.html" data-i18n="nav-faq">FAQ</a>
+<a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="contact.html" data-i18n="nav-contact">Contact Us</a>
+<div class="flex items-center gap-1 bg-slate-100 dark:bg-slate-800 rounded-lg p-1 mt-4">
+<button onclick="changeLanguage('en')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="en">EN</button>
+<button onclick="changeLanguage('tr')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="tr">TR</button>
+</div>
+<div class="flex gap-2 mt-4">
+<a onclick="redirectToAppStore(event, 'login')" class="flex-1 flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate" data-i18n="btn-login">Sign In</span>
+</a>
+<a onclick="redirectToAppStore(event, 'signup')" class="flex-1 flex items-center justify-center rounded-lg h-10 px-4 bg-slate-200/50 dark:bg-slate-700/50 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate" data-i18n="btn-signup">Sign Up</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-4 md:px-10 py-8 md:py-12 flex flex-col gap-10">
+<section class="flex flex-col gap-4 border-b border-slate-200 dark:border-slate-700 pb-8">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div class="max-w-2xl">
+<h1 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight tracking-tight" data-i18n="privacy-subtitle">Personal Data Protection and Privacy Policy</h1>
+</div>
+    <div class="flex flex-col items-end gap-2">
+    <p class="text-slate-600 dark:text-slate-400 text-sm font-medium bg-white dark:bg-slate-800/50 px-3 py-1 rounded-full border border-slate-200 dark:border-slate-700" data-i18n="privacy-last-update">Last Update: 7 December 2024</p>
+    </div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+<aside class="lg:col-span-3 hidden lg:block">
+<nav class="sticky top-24 flex flex-col gap-1 p-2">
+<p class="text-xs font-bold text-gray-400 uppercase tracking-widest px-4 mb-2" data-i18n="privacy-nav-title">Contents</p>
+<a class="flex items-center justify-between px-4 py-3 rounded-lg bg-primary/10 text-primary font-bold text-sm border-l-4 border-primary transition-all" href="#section-1">
+<span data-i18n="privacy-nav-1">1. INTRODUCTION</span>
+<span class="material-symbols-outlined text-base">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between px-4 py-3 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800/50 text-sm font-medium transition-all group" href="#section-2">
+<span data-i18n="privacy-nav-2">2. WHAT PERSONAL DATA WE COLLECT</span>
+<span class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 transition-opacity text-gray-400">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between px-4 py-3 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800/50 text-sm font-medium transition-all group" href="#section-3">
+<span data-i18n="privacy-nav-3">3. How we use your personal data</span>
+<span class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 transition-opacity text-gray-400">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between px-4 py-3 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800/50 text-sm font-medium transition-all group" href="#section-4">
+<span data-i18n="privacy-nav-4">4. Do we share your personal data</span>
+<span class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 transition-opacity text-gray-400">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between px-4 py-3 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800/50 text-sm font-medium transition-all group" href="#section-5">
+<span data-i18n="privacy-nav-5">5. Do we transfer your personal data</span>
+<span class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 transition-opacity text-gray-400">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between px-4 py-3 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800/50 text-sm font-medium transition-all group" href="#section-6">
+<span data-i18n="privacy-nav-6">6. How long do we retain your data</span>
+<span class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 transition-opacity text-gray-400">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between px-4 py-3 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800/50 text-sm font-medium transition-all group" href="#section-7">
+<span data-i18n="privacy-nav-7">8. MARKETING COMMUNICATIONS</span>
+<span class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 transition-opacity text-gray-400">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between px-4 py-3 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800/50 text-sm font-medium transition-all group" href="#section-8">
+<span data-i18n="privacy-nav-8">8. COOKIES</span>
+<span class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 transition-opacity text-gray-400">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between px-4 py-3 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800/50 text-sm font-medium transition-all group" href="#section-9">
+<span data-i18n="privacy-nav-9">9. SECURITY</span>
+<span class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 transition-opacity text-gray-400">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between px-4 py-3 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800/50 text-sm font-medium transition-all group" href="#section-12">
+<span data-i18n="privacy-nav-12">12. Minor policy</span>
+<span class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 transition-opacity text-gray-400">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between px-4 py-3 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800/50 text-sm font-medium transition-all group" href="#section-14">
+<span data-i18n="privacy-nav-14">14. Contacting us about privacy questions or concerns</span>
+<span class="material-symbols-outlined text-base opacity-0 group-hover:opacity-100 transition-opacity text-gray-400">arrow_forward_ios</span>
+</a>
+</nav>
+</aside>
+<div class="lg:col-span-9 flex flex-col gap-12">
+<div class="flex flex-col gap-6 scroll-mt-28" id="section-1">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="privacy-section-1">1. INTRODUCTION</h2>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-intro-1">Thank you for choosing the relevant service(s) (the "Services") and/or product(s) (the "Product") provided by Payurus. By accessing or using our Services/Products, you CONSENT to the policies and practices set out in this privacy policy (the "Privacy Policy") and represent and warrant that you have the valid consent and authority from the Relevant Person(s) (defined below) for us to collect, use, disclose and/or process your Personal Data as described herein.</p>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-intro-2">This Privacy Policy describes how we will collect, use and disclose your personal data when you access or use our Services/Products. You agree that Payurus may update this Privacy Policy at any time by posting the amended version on our website and associated application program interface or mobile applications (the "Site") or sending the latest Privacy Policy to you via email. Your use or continued use of any Services/Products after such amendment shall be deemed as your acceptance and agreement to the same.</p>
+</div>
+<div class="flex flex-col gap-6 scroll-mt-28" id="section-2">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="privacy-section-2">2. WHAT PERSONAL DATA WE COLLECT</h2>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-data-1">We may from time to time collect, process, and store certain personally identifiable information that can be used to contact or identify you and your beneficial owners, directors, officers, authorized signatories, employees, representatives, guarantee/security providers and other natural persons related to you ("Relevant Persons") via your use of the Services/Products or where you have given your consent ("Personal Data").</p>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-data-2">Such Personal Data may include contact details, information and data generated in the ordinary course of your relationship with us, information and data collected when you or a Relevant Person participates in events organized by us and information from cookies or the use of any information technology applications.</p>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base font-medium mt-4" data-i18n="privacy-data-list">The Personal Data that you may provide to us during the onboarding process may also include, without limitation:</p>
+<ul class="list-disc list-inside space-y-2 text-slate-600 dark:text-slate-300 text-base ml-4">
+<li data-i18n="privacy-data-item-1">Full legal name (including former name, and names in English and Chinese, if applicable)</li>
+<li data-i18n="privacy-data-item-2">Identification document type (e.g. Passport)</li>
+<li data-i18n="privacy-data-item-3">Identification document number (e.g. Passport No.)</li>
+<li data-i18n="privacy-data-item-4">Gender</li>
+<li data-i18n="privacy-data-item-5">Date of birth</li>
+<li data-i18n="privacy-data-item-6">Place of birth</li>
+<li data-i18n="privacy-data-item-7">Nationality</li>
+<li data-i18n="privacy-data-item-8">Residential address</li>
+<li data-i18n="privacy-data-item-9">Country/state of residence</li>
+<li data-i18n="privacy-data-item-10">Total net wealth (approximately in USD)</li>
+<li data-i18n="privacy-data-item-11">Purpose of account opening</li>
+<li data-i18n="privacy-data-item-12">Initial and ongoing sources of wealth or income</li>
+<li data-i18n="privacy-data-item-13">Nature and details of the business/occupation/employment</li>
+<li data-i18n="privacy-data-item-14">Level of activity anticipated</li>
+<li data-i18n="privacy-data-item-15">Source of funds/digital assets to be used in the relationship</li>
+<li data-i18n="privacy-data-item-16">Credit history and score</li>
+<li data-i18n="privacy-data-item-17">Contact phone number</li>
+<li data-i18n="privacy-data-item-18">Email address</li>
+<li data-i18n="privacy-data-item-19">Your transaction history and spending pattern</li>
+<li data-i18n="privacy-data-item-20">Bank account information</li>
+<li data-i18n="privacy-data-item-21">Blockchain address</li>
+<li data-i18n="privacy-data-item-22">Your location data</li>
+<li data-i18n="privacy-data-item-23">Additional Personal Data or documentation at the discretion of our compliance team</li>
+</ul>
+</div>
+<div class="flex flex-col gap-6 scroll-mt-28" id="section-3">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="privacy-section-3">3. How we use your personal data</h2>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base font-medium" data-i18n="privacy-use-list">We may use the collected Personal Data for the following purposes:</p>
+<ul class="list-disc list-inside space-y-2 text-slate-600 dark:text-slate-300 text-base ml-4">
+<li data-i18n="privacy-use-1">To make decisions relating to the provision or continued provision of the Services/Products to you.</li>
+<li data-i18n="privacy-use-2">To administer, operate, deliver, improve, and personalize the Services/Products.</li>
+<li data-i18n="privacy-use-3">To process your payments and transactions, and to provide you with statements, invoices, receipts and other related information in relation to the Services/Products.</li>
+<li data-i18n="privacy-use-4">To monitor and record the usage of the Services/Products and communications with you and/or the Relevant Persons (including for investigation and fraud prevention purposes).</li>
+<li data-i18n="privacy-use-5">To detect, prevent and address technical issues.</li>
+<li data-i18n="privacy-use-6">For risk assessment and data analysis (including data processing, anti-money laundering and credit analyses), internal management and to carry out internal/external audits.</li>
+<li data-i18n="privacy-use-7">To communicate with you, your affiliates and/or your representatives in relation to events, our Services/Products and other products or services offered by Payurus or its affiliates, unless you have opted not to receive such information.</li>
+<li data-i18n="privacy-use-8">To conduct market research, surveys, promotions and contests, and to analyse your preferences, interests and behaviour in relation to the Services/Products.</li>
+<li data-i18n="privacy-use-9">To fulfil any applicable legal, regulatory and compliance requirements (including anti-money laundering and tax obligations applicable to us).</li>
+<li data-i18n="privacy-use-10">To enforce or defend the rights or property of Payurus, its affiliates and other Users.</li>
+<li data-i18n="privacy-use-11">Carry out any other purpose(s) described to you at the time the data was collected.</li>
+</ul>
+</div>
+<div class="flex flex-col gap-6 scroll-mt-28" id="section-4">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="privacy-section-4">4. Do we share your personal data</h2>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-share-1">We may share your Personal Data with the following persons for the purposes stated above:</p>
+<ul class="list-disc list-inside space-y-2 text-slate-600 dark:text-slate-300 text-base ml-4">
+<li data-i18n="privacy-share-item-1">Our third party service providers who help us provide, operate, maintain, secure and improve the Services/Products (including but not limited to any "Know Your Client" or other blockchain analytics service providers, credit card networks, banks or financial institutions, payment processors, merchants, loyalty programs partners, and service providers that provide website hosting, data analysis, information technology, mailing, telecommunications, human resource, data processing, payments, credit references or other services).</li>
+<li data-i18n="privacy-share-item-2">Any person or entity that is part of Payurus and its affiliates who is under a duty of confidentiality to the disclosing entity.</li>
+<li data-i18n="privacy-share-item-3">Professional advisers of Payurus and its affiliates.</li>
+<li data-i18n="privacy-share-item-4">Any person or entity that we engage or participate in for the purposes of marketing, advertising, or promoting our Services/Products, such as social media platforms, online platforms, or third party websites.</li>
+<li data-i18n="privacy-share-item-5">Any person to whom we are under an obligation or otherwise to make disclosure pursuant to legal process or pursuant to any foreign or domestic legal, tax, and/or regulatory obligation or request.</li>
+<li data-i18n="privacy-share-item-6">Any person or entity that you authorize or consent to receive your Personal Data, such as your authorized representatives, agents, advisors, or beneficiaries.</li>
+<li data-i18n="privacy-share-item-7">Any actual or proposed assignee or business transferee of Payurus and/or its affiliates.</li>
+</ul>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base mt-4" data-i18n="privacy-share-2">We may also share aggregated or anonymized Personal Data with the above persons to help administer, operate, deliver and improve the Services/Products.</p>
+</div>
+<div class="flex flex-col gap-6 scroll-mt-28" id="section-5">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="privacy-section-5">5. Do we transfer your personal data</h2>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-transfer-1">Your information, including Personal Data, may be transferred to and maintained on computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction. Please note that we may transfer the data, including Personal Data, outside your jurisdiction and process it there. Your consent to this Privacy Policy and your submission of such information represents your agreement to that transfer.</p>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-transfer-2">We will take reasonable measures to ensure that your Personal Data is treated securely and in accordance herewith and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your Personal Data and other personal information.</p>
+</div>
+<div class="flex flex-col gap-6 scroll-mt-28" id="section-6">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="privacy-section-6">6. How long do we retain your data</h2>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-retain">We will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our legal agreements and policies. By accessing/using our Services/Products you are giving a consent for us to retain your Personal Data.</p>
+</div>
+<div class="flex flex-col gap-6 scroll-mt-28" id="section-7">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="privacy-section-7">8. MARKETING COMMUNICATIONS</h2>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-marketing-1">We may communicate company news, promotions, and information relating to our products and services provided by us. We may share Personal Data with our affiliates to send marketing communications. We will only send you such marketing communications if we have received your express consent in the relevant context.</p>
+</div>
+<div class="flex flex-col gap-6 scroll-mt-28" id="section-8">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="privacy-section-8">8. COOKIES</h2>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-cookies">We use cookies and similar tracking technologies to track the activity on our Site and hold certain information. Cookies are files with small amount of data which may include an anonymous unique identifier.</p>
+</div>
+<div class="flex flex-col gap-6 scroll-mt-28" id="section-9">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="privacy-section-9">9. SECURITY</h2>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-security">The security of your Personal Data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
+</div>
+<div class="flex flex-col gap-6 scroll-mt-28" id="section-12">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="privacy-section-12">12. Minor policy</h2>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-minor">We do not provide Services/Products to anyone who is regarded as a "minor" or equivalent under applicable law. We do not knowingly and intentionally collect the personally identifiable information from anyone who is regarded as a "minor" or equivalent under applicable law. If you are a parent or guardian and you are aware that your child (being a "minor" or equivalent under applicable law) has provided us with Personal Data, please contact us and we will take appropriate measures.</p>
+</div>
+<div class="flex flex-col gap-6 scroll-mt-28" id="section-14">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="privacy-section-14">14. Contacting us about privacy questions or concerns</h2>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-contact-1">If you have any questions about this Privacy Policy or the use of your Personal Data, please contact us by sending an email to the following address support@payurus.com with the subject "PRIVACY QUESTION".</p>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-contact-2">If you wish to know what Personal Data we retain and if you want it to be updated, corrected or deleted from our systems, please contact support@payurus.com with the subject "DATA INQUIRY". We will do our best to do so as soon as possible with exception that we may refuse your deletion request in certain circumstances, such as compliance with law or legal purposes.</p>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-contact-3">If you wish to withdraw your consent, please contact support@payurus.com with the subject "DATA INQUIRY". Where you or a Relevant Person withdraws your/its/their consent or fails to supply relevant information or data required for us to provide our Services/Products to you, we may be unable to provide or continue to provide Services/Products to you.</p>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base" data-i18n="privacy-contact-4">In response to data access, correction, deletion or data portability request, we will verify the requesting party's identity to ensure that he or she is legally entitled to make such request. While we aim to respond to these requests free of charge, we reserve the right to charge you a reasonable fee especially if the request is repetitive or onerous.</p>
+</div>
+<div class="mt-8 p-8 md:p-10 rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 text-white relative overflow-hidden" id="section-contact">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary opacity-20 blur-[80px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+<div class="flex-1">
+<h3 class="text-2xl font-bold mb-3" data-i18n="privacy-questions">Do you have questions?</h3>
+<p class="text-gray-300 mb-6 max-w-lg" data-i18n="privacy-contact-subtitle">You can contact us by filling out the "Data Controller Application Form" and sending it to our KEP address below or to our physical address via notary.</p>
+<div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+<a class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-lg transition-colors" href="mailto:support@payurus.com">
+<span class="material-symbols-outlined text-lg">mail</span>
+support@payurus.com
+</a>
+</div>
+</div>
+<div class="hidden md:block">
+<div class="size-32 bg-white/5 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10">
+<span class="material-symbols-outlined text-4xl md:text-5xl lg:text-6xl text-primary">support_agent</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-slate-800/30 border-t border-slate-200 dark:border-slate-700 pt-16 pb-8 mt-auto">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 mb-12">
+<div class="lg:col-span-3">
+<div class="flex items-center gap-2 mb-6 text-slate-900 dark:text-white">
+<a href="index.html"><img src="payuruslogo_15012026.png" alt="Payurus" class="h-6 w-auto"/></a>
+</div>
+<p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed" data-i18n="footer-description">Manage your financial transactions quickly, easily and securely. Step into the future of finance with Payurus.</p>
+<div class="flex justify-between items-center gap-4">
+<a href="https://play.google.com/store/apps/details?id=com.payurus" target="_blank" class="hover:opacity-90 transition-all transform hover:-translate-y-1 inline-block rounded-xl overflow-hidden" style="border: 1px solid rgba(0, 0, 0, 1) !important; background-color: rgba(42, 45, 54, 1) !important; display: inline-block;">
+<img src="google.jpg" alt="Get it on Google Play" class="h-12 w-auto object-contain block" style="border: none !important;"/>
+</a>
+<a href="https://apps.apple.com/app/payurus" target="_blank" class="hover:opacity-90 transition-all transform hover:-translate-y-1 inline-block rounded-xl overflow-hidden" style="border: 1px solid rgba(0, 0, 0, 1) !important; background-color: rgba(42, 45, 54, 1) !important; display: inline-block;">
+<img src="apple.jpg" alt="Download on the App Store" class="h-12 w-auto object-contain block" style="border: none !important;"/>
+</a>
+</div>
+</div>
+<div class="lg:col-span-3 sm:col-span-4 md:col-span-1">
+<h3 class="font-bold text-slate-900 dark:text-white mb-4" data-i18n="footer-quick-access">Quick Access</h3>
+<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="index.html" data-i18n="common-home">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="about.html" data-i18n="nav-about">About Us</a></li>
+</ul>
+</div>
+<div class="lg:col-span-3 sm:col-span-4 md:col-span-1">
+<h3 class="font-bold text-slate-900 dark:text-white mb-4" data-i18n="footer-transactions">Transactions</h3>
+<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="deposit-details.html" data-i18n="common-deposit">Deposit Details</a></li>
+<li><a class="hover:text-primary transition-colors" href="withdrawal-details.html" data-i18n="common-withdrawal">Withdrawal Details</a></li>
+<li><a class="hover:text-primary transition-colors" href="transfer-details.html" data-i18n="common-transfer">Transfer Details</a></li>
+<li><a class="hover:text-primary transition-colors" href="limits.html" data-i18n="common-limits">Limits</a></li>
+</ul>
+</div>
+<div class="lg:col-span-3 sm:col-span-4 md:col-span-1">
+<h3 class="font-bold text-slate-900 dark:text-white mb-4" data-i18n="footer-support">Support &amp; Information</h3>
+<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="faq.html" data-i18n="common-faq">Frequently Asked Questions</a></li>
+<li><a class="hover:text-primary transition-colors" href="contact.html" data-i18n="common-contact">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="announcements.html" data-i18n="common-announcements">Announcements</a></li>
+<li><a class="hover:text-primary transition-colors" href="privacy.html" data-i18n="common-privacy">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-700 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+<p class="text-sm text-slate-500 dark:text-slate-500" data-i18n="footer-copyright">© 2024 Payurus. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined !text-xl">public</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined !text-xl">alternate_email</span></a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple script to handle smooth scroll offset for sticky header
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerOffset = 100; // Adjust based on your sticky header height
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                    
+                    // Update active nav item
+                    updateActiveNav(targetId);
+                }
+            });
+        });
+        
+        // Function to update active navigation item
+        function updateActiveNav(activeId) {
+            const navLinks = document.querySelectorAll('aside nav a');
+            navLinks.forEach(link => {
+                link.classList.remove('bg-primary/10', 'text-primary', 'border-l-4', 'border-primary', 'font-bold');
+                link.classList.add('text-slate-800', 'dark:text-slate-200');
+                if (link.getAttribute('href') === '#' + activeId) {
+                    link.classList.add('bg-primary/10', 'text-primary', 'border-l-4', 'border-primary', 'font-bold');
+                    link.classList.remove('text-slate-800', 'dark:text-slate-200');
+                }
+            });
+        }
+        
+        // Update active nav on scroll
+        function onScroll() {
+            const sections = document.querySelectorAll('[id^="section-"]');
+            const headerOffset = 150;
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop <= headerOffset) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            if (current) {
+                updateActiveNav(current);
+            }
+        }
+        
+        // Throttle scroll events
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    onScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+        
+        // Set initial active nav
+        updateActiveNav('section-1');
+    </script>
+<!-- App Store Redirect Overlay -->
+<div id="app-store-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[9999] hidden items-center justify-center flex-col gap-6">
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-8 md:p-12 max-w-md mx-4 text-center shadow-2xl transform scale-95 opacity-0 transition-all duration-300">
+<div class="mb-6">
+<img src="applestorelogo.png" alt="App Store" class="h-20 w-auto mx-auto mb-4 animate-pulse"/>
+<div class="flex items-center justify-center gap-2 text-primary">
+<div class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 0s;"></div>
+<div class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+<div class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 0.4s;"></div>
+</div>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Redirecting to App Store</h3>
+<p class="text-slate-600 dark:text-slate-400">Please wait while we redirect you to download the Payurus app...</p>
+</div>
+</div>
+<script>
+function redirectToAppStore(event, type) {
+event.preventDefault();
+const overlay = document.getElementById('app-store-overlay');
+overlay.classList.remove('hidden');
+overlay.classList.add('flex');
+setTimeout(() => {
+overlay.querySelector('.transform').classList.remove('scale-95', 'opacity-0');
+overlay.querySelector('.transform').classList.add('scale-100', 'opacity-100');
+}, 10);
+setTimeout(() => {
+window.location.href = 'https://apps.apple.com/app/payurus';
+}, 1500);
+}
+document.addEventListener('DOMContentLoaded', function() {
+const overlay = document.getElementById('app-store-overlay');
+if (overlay) {
+overlay.addEventListener('click', function(e) {
+if (e.target === overlay) {
+overlay.classList.add('hidden');
+overlay.classList.remove('flex');
+}
+});
+}
+});
+</script>
+
+</body></html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n-title="common-withdrawal">Payurus - Withdrawal Details</title>
+<link rel="icon" type="image/x-icon" href="payurus_p_logo_15012026.ico"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#c70038",
+              "background-light": "#f9fafb",
+              "background-dark": "#1a1a1a",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+    <style>
+        .lang-btn.active {
+            background-color: #c70038;
+            color: white;
+        }
+        .lang-btn:not(.active) {
+            background-color: transparent;
+            color: #64748b;
+        }
+        .lang-btn:not(.active):hover {
+            background-color: #f1f5f9;
+            color: #c70038;
+        }
+        .dark .lang-btn:not(.active):hover {
+            background-color: #334155;
+        }
+    </style>
+    <script src="i18n.js"></script>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-700 py-3">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<a href="index.html"><img src="payuruslogo_15012026.png" alt="Payurus" class="h-5 md:h-6 w-auto"/></a>
+</div>
+<nav class="hidden md:flex flex-1 justify-center items-center gap-9">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="index.html" data-i18n="nav-home">Home</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="about.html" data-i18n="nav-about">About Us</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="faq.html" data-i18n="nav-faq">FAQ</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="contact.html" data-i18n="nav-contact">Contact Us</a>
+</nav>
+<div class="flex gap-2 items-center">
+<div class="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
+<button onclick="changeLanguage('en')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="en">EN</button>
+<button onclick="changeLanguage('tr')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="tr">TR</button>
+</div>
+<a onclick="redirectToAppStore(event, 'login')" class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate" data-i18n="btn-login">Sign In</span>
+</a>
+<a onclick="redirectToAppStore(event, 'signup')" class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-200/50 dark:bg-slate-700/50 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate" data-i18n="btn-signup">Sign Up</span>
+</a>
+<button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-700 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 py-4 space-y-3">
+<a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="index.html" data-i18n="nav-home">Home</a>
+<a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="about.html" data-i18n="nav-about">About Us</a>
+<a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="faq.html" data-i18n="nav-faq">FAQ</a>
+<a class="block py-2 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="contact.html" data-i18n="nav-contact">Contact Us</a>
+<div class="flex items-center gap-1 bg-slate-100 dark:bg-slate-800 rounded-lg p-1 mt-4">
+<button onclick="changeLanguage('en')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="en">EN</button>
+<button onclick="changeLanguage('tr')" class="lang-btn px-3 py-1.5 rounded text-xs font-bold transition-colors" data-lang="tr">TR</button>
+</div>
+<div class="flex gap-2 mt-4">
+<a onclick="redirectToAppStore(event, 'login')" class="flex-1 flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate" data-i18n="btn-login">Sign In</span>
+</a>
+<a onclick="redirectToAppStore(event, 'signup')" class="flex-1 flex items-center justify-center rounded-lg h-10 px-4 bg-slate-200/50 dark:bg-slate-700/50 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate" data-i18n="btn-signup">Sign Up</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-5 sm:py-10 px-4">
+<div class="layout-content-container flex flex-col w-full max-w-[1080px] flex-1">
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex min-w-0 sm:min-w-72 flex-col gap-2">
+<p class="text-gray-900 dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]" data-i18n="common-withdrawal">Withdrawal Details</p>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal" data-i18n="withdrawal-subtitle">Learn how to withdraw funds from your Payurus account step by step.</p>
+</div>
+</div>
+<!-- Step-by-Step Guide Section -->
+<div class="p-4 mb-8">
+<div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl shadow-sm p-6 md:p-8">
+<h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8" data-i18n="withdrawal-guide-title">How to Make a Withdrawal</h2>
+
+<!-- Step 1 -->
+<div class="mb-10 pb-10 border-b border-gray-200 dark:border-gray-800 last:border-0 last:mb-0 last:pb-0">
+<div class="flex items-start gap-3 sm:gap-4 mb-4">
+<div class="hidden min-[400px]:flex items-center justify-center size-10 sm:size-12 rounded-full bg-primary/10 text-primary flex-shrink-0">
+<span class="material-symbols-outlined !text-xl sm:!text-2xl">account_balance</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="withdrawal-step1">Step 1: Access Your Payurus Account</h3>
+<p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-4" data-i18n="withdrawal-step1-desc">Log in to your Payurus account through the mobile app or web portal. Make sure you have sufficient balance in your account to cover the withdrawal amount and any applicable fees.</p>
+<div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 mt-4">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="withdrawal-step1-tip">💡 Tip:</p>
+<p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="withdrawal-step1-tip-text">Before initiating a withdrawal, verify that your account balance is sufficient. You can check your current balance on the main dashboard.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Step 2 -->
+<div class="mb-10 pb-10 border-b border-gray-200 dark:border-gray-800 last:border-0 last:mb-0 last:pb-0">
+<div class="flex items-start gap-3 sm:gap-4 mb-4">
+<div class="hidden min-[400px]:flex items-center justify-center size-10 sm:size-12 rounded-full bg-primary/10 text-primary flex-shrink-0">
+<span class="material-symbols-outlined !text-xl sm:!text-2xl">account_balance_wallet</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="withdrawal-step2">Step 2: Select Your Bank Account</h3>
+<p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-4" data-i18n="withdrawal-step2-desc">Navigate to the withdrawal section and choose the bank account where you want to receive the funds. If you haven't added a bank account yet, you'll need to add one first.</p>
+<div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 mt-4 border border-blue-200 dark:border-blue-800">
+<p class="text-sm font-medium text-blue-900 dark:text-blue-300 mb-3" data-i18n="withdrawal-step2-info">Adding a Bank Account:</p>
+<div class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined !text-base text-blue-600 dark:text-blue-400">info</span>
+<span data-i18n="withdrawal-step2-info1">The bank account must be registered in your name</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined !text-base text-blue-600 dark:text-blue-400">security</span>
+<span data-i18n="withdrawal-step2-info2">You'll need to provide your IBAN and bank details</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined !text-base text-blue-600 dark:text-blue-400">verified</span>
+<span data-i18n="withdrawal-step2-info3">The account will be verified before you can use it for withdrawals</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Step 3 -->
+<div class="mb-10 pb-10 border-b border-gray-200 dark:border-gray-800 last:border-0 last:mb-0 last:pb-0">
+<div class="flex items-start gap-3 sm:gap-4 mb-4">
+<div class="hidden min-[400px]:flex items-center justify-center size-10 sm:size-12 rounded-full bg-primary/10 text-primary flex-shrink-0">
+<span class="material-symbols-outlined !text-xl sm:!text-2xl">attach_money</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="withdrawal-step3">Step 3: Enter Withdrawal Amount</h3>
+<p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-4" data-i18n="withdrawal-step3-desc">Enter the amount you wish to withdraw. Make sure the amount doesn't exceed your available balance and accounts for any processing fees that may apply.</p>
+<div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 mt-4">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="withdrawal-step3-tip">⚠️ Important:</p>
+<ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 list-disc list-inside">
+<li data-i18n="withdrawal-step3-tip1">Check for minimum and maximum withdrawal limits</li>
+<li data-i18n="withdrawal-step3-tip2">Processing fees may apply - these will be shown before confirmation</li>
+<li data-i18n="withdrawal-step3-tip3">Ensure you have enough balance to cover both the withdrawal and fees</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Step 4 -->
+<div class="mb-10 pb-10 border-b border-gray-200 dark:border-gray-800 last:border-0 last:mb-0 last:pb-0">
+<div class="flex items-start gap-3 sm:gap-4 mb-4">
+<div class="hidden min-[400px]:flex items-center justify-center size-10 sm:size-12 rounded-full bg-primary/10 text-primary flex-shrink-0">
+<span class="material-symbols-outlined !text-xl sm:!text-2xl">preview</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="withdrawal-step4">Step 4: Review Withdrawal Details</h3>
+<p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-4" data-i18n="withdrawal-step4-desc">Carefully review all the withdrawal information displayed on the screen. Verify the bank account details, withdrawal amount, processing fee, and the total amount that will be deducted from your account.</p>
+<div class="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4 mt-4 border border-yellow-200 dark:border-yellow-800">
+<p class="text-sm font-medium text-yellow-900 dark:text-yellow-300 mb-2" data-i18n="withdrawal-step4-warning">Double-check:</p>
+<ul class="text-sm text-yellow-800 dark:text-yellow-400 space-y-1 list-disc list-inside">
+<li data-i18n="withdrawal-step4-warning1">Bank account number and IBAN are correct</li>
+<li data-i18n="withdrawal-step4-warning2">Withdrawal amount matches what you intended</li>
+<li data-i18n="withdrawal-step4-warning3">Total deduction amount (withdrawal + fees) is acceptable</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Step 5 -->
+<div class="mb-6">
+<div class="flex items-start gap-3 sm:gap-4 mb-4">
+<div class="hidden min-[400px]:flex items-center justify-center size-10 sm:size-12 rounded-full bg-primary/10 text-primary flex-shrink-0">
+<span class="material-symbols-outlined !text-xl sm:!text-2xl">check_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="withdrawal-step5">Step 5: Confirm and Submit</h3>
+<p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-4" data-i18n="withdrawal-step5-desc">Once you've verified all the details, confirm the withdrawal request. You may be asked to authenticate the transaction using 2FA or other security measures.</p>
+<div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 mt-4 border border-green-200 dark:border-green-800">
+<p class="text-sm font-medium text-green-900 dark:text-green-300 mb-2" data-i18n="withdrawal-step5-success">After Submission:</p>
+<p class="text-sm text-green-800 dark:text-green-400 mb-2" data-i18n="withdrawal-step5-success-text">Your withdrawal request will be processed within 1-3 business days. You'll receive a confirmation email and notification once the funds are transferred to your bank account.</p>
+<p class="text-sm text-green-800 dark:text-green-400" data-i18n="withdrawal-step5-success-text2">You can track the status of your withdrawal in the transaction history section of your Payurus account.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Important Information Section -->
+<div class="p-4 mb-8">
+<div class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-6">
+<div class="flex items-start gap-4">
+<div class="text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0">
+<span class="material-symbols-outlined !text-3xl">warning</span>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-yellow-900 dark:text-yellow-200 mb-3" data-i18n="withdrawal-info-title">Important Information</h3>
+<div class="space-y-3 text-sm text-yellow-800 dark:text-yellow-300">
+<p data-i18n="withdrawal-info-1">• Withdrawals are processed within 1-3 business days. Processing times may vary depending on your bank and the time of submission.</p>
+<p data-i18n="withdrawal-info-2">• Please ensure your bank account information is correct and up-to-date. Incorrect details may result in failed transfers or delays.</p>
+<p data-i18n="withdrawal-info-3">• The bank account must be registered in your name and match the name on your Payurus account.</p>
+<p data-i18n="withdrawal-info-4">• Processing fees may apply to withdrawals. These fees will be clearly displayed before you confirm the transaction.</p>
+<p data-i18n="withdrawal-info-5">• If your withdrawal hasn't arrived after 3 business days, please contact our support team with your transaction reference number.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- FAQ Section -->
+<div class="p-4 mb-8">
+<div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl shadow-sm p-6 md:p-8">
+<h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6" data-i18n="withdrawal-faq-title">Frequently Asked Questions</h2>
+<div class="space-y-6">
+<div class="pb-6 border-b border-gray-200 dark:border-gray-800 last:border-0">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2" data-i18n="withdrawal-faq-q1">How long does it take for my withdrawal to be processed?</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="withdrawal-faq-a1">Most withdrawals are processed within 1-3 business days. The exact processing time depends on your bank and the time you submit the request. Weekend and holiday submissions may take longer.</p>
+</div>
+<div class="pb-6 border-b border-gray-200 dark:border-gray-800 last:border-0">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2" data-i18n="withdrawal-faq-q2">Are there any fees for withdrawals?</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="withdrawal-faq-a2">Processing fees may apply to withdrawals depending on your account type and withdrawal amount. All fees are clearly displayed before you confirm the transaction, so you'll know exactly how much will be deducted.</p>
+</div>
+<div class="pb-6 border-b border-gray-200 dark:border-gray-800 last:border-0">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2" data-i18n="withdrawal-faq-q3">What should I do if my withdrawal hasn't arrived?</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="withdrawal-faq-a3">If your withdrawal hasn't appeared in your bank account after 3 business days, please contact our support team. Have your transaction reference number and withdrawal details ready to help us locate and resolve the issue.</p>
+</div>
+<div class="pb-6 border-b border-gray-200 dark:border-gray-800 last:border-0">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2" data-i18n="withdrawal-faq-q4">Is there a minimum or maximum withdrawal amount?</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="withdrawal-faq-a4">Yes, there are minimum and maximum withdrawal limits. These limits may vary based on your account type and verification level. Check your account settings or contact support to learn about the specific limits for your account.</p>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2" data-i18n="withdrawal-faq-q5">Can I cancel a withdrawal request?</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="withdrawal-faq-a5">Withdrawal requests can usually be cancelled if they haven't been processed yet. Check your transaction history to see if a cancellation option is available. If the withdrawal is already in process, you'll need to contact support for assistance.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Help Section -->
+<div class="p-4">
+<div class="bg-gradient-to-r from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 rounded-xl p-6 border border-primary/20">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2" data-i18n="withdrawal-help-title">Need Help?</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm" data-i18n="withdrawal-help-desc">If you encounter any issues during the withdrawal process or have questions, our support team is here to help you.</p>
+</div>
+<a href="contact.html" class="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap" data-i18n="withdrawal-help-button">
+<span>Contact Support</span>
+<span class="material-symbols-outlined !text-xl">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-slate-800/30 border-t border-slate-200 dark:border-slate-700 pt-16 pb-8 mt-auto">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 mb-12">
+<div class="lg:col-span-3">
+<div class="flex items-center gap-2 mb-6 text-slate-900 dark:text-white">
+<a href="index.html"><img src="payuruslogo_15012026.png" alt="Payurus" class="h-6 w-auto"/></a>
+</div>
+<p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed" data-i18n="footer-description">
+Manage your financial transactions quickly, easily and securely. Step into the future of finance with Payurus.
+</p>
+<div class="flex justify-between items-center gap-4">
+<a href="https://play.google.com/store/apps/details?id=com.payurus" target="_blank" class="hover:opacity-90 transition-all transform hover:-translate-y-1 inline-block rounded-xl overflow-hidden" style="border: 1px solid rgba(0, 0, 0, 1) !important; background-color: rgba(42, 45, 54, 1) !important; display: inline-block;">
+<img src="google.jpg" alt="Get it on Google Play" class="h-12 w-auto object-contain block" style="border: none !important;"/>
+</a>
+<a href="https://apps.apple.com/app/payurus" target="_blank" class="hover:opacity-90 transition-all transform hover:-translate-y-1 inline-block rounded-xl overflow-hidden" style="border: 1px solid rgba(0, 0, 0, 1) !important; background-color: rgba(42, 45, 54, 1) !important; display: inline-block;">
+<img src="apple.jpg" alt="Download on the App Store" class="h-12 w-auto object-contain block" style="border: none !important;"/>
+</a>
+</div>
+</div>
+<div class="lg:col-span-3 sm:col-span-4 md:col-span-1">
+<h3 class="font-bold text-slate-900 dark:text-white mb-4" data-i18n="footer-quick-access">Quick Access</h3>
+<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="index.html" data-i18n="common-home">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="about.html" data-i18n="nav-about">About Us</a></li>
+</ul>
+</div>
+<div class="lg:col-span-3 sm:col-span-4 md:col-span-1">
+<h3 class="font-bold text-slate-900 dark:text-white mb-4" data-i18n="footer-transactions">Transactions</h3>
+<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="deposit-details.html" data-i18n="common-deposit">Deposit Details</a></li>
+<li><a class="hover:text-primary transition-colors" href="withdrawal-details.html" data-i18n="common-withdrawal">Withdrawal Details</a></li>
+<li><a class="hover:text-primary transition-colors" href="transfer-details.html" data-i18n="common-transfer">Transfer Details</a></li>
+<li><a class="hover:text-primary transition-colors" href="limits.html" data-i18n="common-limits">Limits</a></li>
+</ul>
+</div>
+<div class="lg:col-span-3 sm:col-span-4 md:col-span-1">
+<h3 class="font-bold text-slate-900 dark:text-white mb-4" data-i18n="footer-support">Support &amp; Information</h3>
+<ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="faq.html" data-i18n="common-faq">Frequently Asked Questions</a></li>
+<li><a class="hover:text-primary transition-colors" href="contact.html" data-i18n="common-contact">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="announcements.html" data-i18n="common-announcements">Announcements</a></li>
+<li><a class="hover:text-primary transition-colors" href="privacy.html" data-i18n="common-privacy">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-700 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+<p class="text-sm text-slate-500 dark:text-slate-500" data-i18n="footer-copyright">© 2024 Payurus. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined !text-xl">public</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined !text-xl">alternate_email</span></a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<!-- App Store Redirect Overlay -->
+<div id="app-store-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[9999] hidden items-center justify-center flex-col gap-6">
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-8 md:p-12 max-w-md mx-4 text-center shadow-2xl transform scale-95 opacity-0 transition-all duration-300">
+<div class="mb-6">
+<img src="applestorelogo.png" alt="App Store" class="h-20 w-auto mx-auto mb-4 animate-pulse"/>
+<div class="flex items-center justify-center gap-2 text-primary">
+<div class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 0s;"></div>
+<div class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+<div class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 0.4s;"></div>
+</div>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Redirecting to App Store</h3>
+<p class="text-slate-600 dark:text-slate-400">Please wait while we redirect you to download the Payurus app...</p>
+</div>
+</div>
+<script>
+function redirectToAppStore(event, type) {
+event.preventDefault();
+const overlay = document.getElementById('app-store-overlay');
+overlay.classList.remove('hidden');
+overlay.classList.add('flex');
+setTimeout(() => {
+overlay.querySelector('.transform').classList.remove('scale-95', 'opacity-0');
+overlay.querySelector('.transform').classList.add('scale-100', 'opacity-100');
+}, 10);
+setTimeout(() => {
+window.location.href = 'https://apps.apple.com/app/payurus';
+}, 1500);
+}
+document.addEventListener('DOMContentLoaded', function() {
+const overlay = document.getElementById('app-store-overlay');
+if (overlay) {
+overlay.addEventListener('click', function(e) {
+if (e.target === overlay) {
+overlay.classList.add('hidden');
+overlay.classList.remove('flex');
+}
+});
+}
+});
+</script>
+
+</body></html>
+
