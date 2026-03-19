@@ -622,7 +622,7 @@ const translations = {
         "about-fingertips-text": "Payurus, geleneksel finans ile dijital varlıkları birleştirerek herkesin modern ödeme çözümlerine erişmesini ve bunları kullanmasını sağlar. Çoklu para birimi hesaplarımız ve ödeme sistemlerimiz, dijital ödemelere doğrudan erişim sunarak herkes için küresel erişimi genişletir.",
         "about-global-payments-text": "Özel ödeme altyapımız, kullanıcıların güvenli sistemlerle dünya çapında para göndermesine ve almasına olanak tanır. Hızlı ve güvenilir ödemeleri her zamankinden daha fazla pazara erişilebilir kılıyoruz.",
         "about-compliance-security": "Uyumluluk ve Güvenlik",
-        "about-compliance-text": "Güven ve güvenlik yaptığımız her şeyin merkezindedir. Payurus, sıkı uyumluluk standartlarını karşılar ve fonlarınızın ve verilerinizin her adımda korunduğundan emin olur.",
+        "about-compliance-text": "Güven ve güvenlik, yaptığımız her şeyin merkezinde yer alır. Payurus, sıkı uyumluluk standartlarına uyar ve fonlarınızın ile verilerinizin her adımda korunduğundan emin olur.",
         "about-compliance-security-alt": "Risk Kontrolleri ve Koruma",
         "about-compliance-text-alt": "Güvenlik mimarimiz ve risk kontrollerimiz platformun her katmanına entegredir. Payurus, güçlü uyumluluk süreçleri ve sürekli izleme yaklaşımıyla fonlarınızın ve kişisel verilerinizin her işlem boyunca korunmasına yardımcı olur.",
         "about-freeze-card": "Kartı Dondur",
